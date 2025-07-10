@@ -4,19 +4,23 @@ struct CartView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
+                // Safe area top spacing
+                Color.clear
+                    .frame(height: 0)
+                    .background(Color.white)
+                    .ignoresSafeArea(.container, edges: .top)
+                
                 // Top section with title
-                VStack {
-                    HStack {
-                        Text("Bag")
-                            .font(.largeTitle)
-                            .fontWeight(.medium)
-                            .foregroundColor(.black)
-                        Spacer()
-                    }
-                    .padding(.horizontal, 24)
-                    .padding(.top, 16)
-                    .padding(.bottom, 8)
+                HStack {
+                    Text("Bag")
+                        .font(.largeTitle)
+                        .fontWeight(.medium)
+                        .foregroundColor(.black)
+                    Spacer()
                 }
+                .padding(.horizontal, 24)
+                .padding(.top, 16)
+                .padding(.bottom, 8)
                 
                 // Middle section - flexible space with centered content
                 Spacer()
@@ -140,7 +144,7 @@ struct CartView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.white)
-            .ignoresSafeArea(.all)
+            .ignoresSafeArea(.container, edges: .bottom)
         }
     }
 }
