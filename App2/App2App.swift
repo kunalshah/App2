@@ -25,7 +25,7 @@ struct App2App: App {
 
     var body: some Scene {
         WindowGroup {
-            CartView()
+            MainTabView()
         }
         .modelContainer(sharedModelContainer)
     }

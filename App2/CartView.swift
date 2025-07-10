@@ -56,7 +56,7 @@ struct CartView: View {
                 
                 Spacer()
                 
-                // Bottom section with button and tab bar
+                // Bottom section with button
                 VStack(spacing: 0) {
                     // Shop Now button
                     Button(action: {
@@ -72,79 +72,10 @@ struct CartView: View {
                     }
                     .padding(.horizontal, 24)
                     .padding(.bottom, 24)
-                    
-                    // Tab bar
-                    HStack {
-                        // Home tab
-                        VStack(spacing: 4) {
-                            Image(systemName: "house")
-                                .font(.system(size: 20))
-                                .foregroundColor(.gray)
-                            Text("Home")
-                                .font(.system(size: 10))
-                                .foregroundColor(.gray)
-                        }
-                        .frame(maxWidth: .infinity)
-                        
-                        // Shop tab
-                        VStack(spacing: 4) {
-                            Image(systemName: "magnifyingglass")
-                                .font(.system(size: 20))
-                                .foregroundColor(.gray)
-                            Text("Shop")
-                                .font(.system(size: 10))
-                                .foregroundColor(.gray)
-                        }
-                        .frame(maxWidth: .infinity)
-                        
-                        // Favorites tab
-                        VStack(spacing: 4) {
-                            Image(systemName: "heart")
-                                .font(.system(size: 20))
-                                .foregroundColor(.gray)
-                            Text("Favorites")
-                                .font(.system(size: 10))
-                                .foregroundColor(.gray)
-                        }
-                        .frame(maxWidth: .infinity)
-                        
-                        // Bag tab (selected)
-                        VStack(spacing: 4) {
-                            Image(systemName: "bag.fill")
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                            Text("Bag")
-                                .font(.system(size: 10))
-                                .foregroundColor(.black)
-                        }
-                        .frame(maxWidth: .infinity)
-                        
-                        // Profile tab
-                        VStack(spacing: 4) {
-                            Image(systemName: "person")
-                                .font(.system(size: 20))
-                                .foregroundColor(.gray)
-                            Text("Profile")
-                                .font(.system(size: 10))
-                                .foregroundColor(.gray)
-                        }
-                        .frame(maxWidth: .infinity)
-                    }
-                    .padding(.horizontal, 24)
-                    .padding(.vertical, 12)
-                    .background(Color.white)
-                    
-                    // Home indicator
-                    Rectangle()
-                        .fill(Color.black)
-                        .frame(width: 134, height: 5)
-                        .cornerRadius(2.5)
-                        .padding(.bottom, 8)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.white)
-            .ignoresSafeArea(.container, edges: .bottom)
         }
     }
 }
